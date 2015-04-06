@@ -4,6 +4,7 @@ define dslinit(){
 	includeCSS("bootstrap-3.3.2-dist/css/bootstrap.css")
 	includeCSS("mycss/style.css")
 	includeCSS("mycss/blog.css")
+	includeJS("myjs/admin.js")
 }
 
 define main(){
@@ -18,9 +19,9 @@ define dslheader(){
 	<div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
-          navigate(root()){<a class="blog-nav-item active">"Home"</a>}
-          navigate(page_login()){<a class="blog-nav-item">"About"</a>}
-		  navigate(page_about()){<a class="blog-nav-item">"Login"</a>}
+		  navigate(root())[class="blog-nav-item active"]{"Home"}
+		  navigate(page_about())[class="blog-nav-item"]{"About"}
+		  navigate(page_login())[class="blog-nav-item"]{"Login"}
         </nav>
       </div>
     </div>
@@ -93,17 +94,64 @@ define dslfooter(){
     </footer>
 }
 
-
 define main_login(){
 	includeCSS("mycss/signin.css")
 	var name : String
 	var pass : Secret
 	
+	
 	form{
-		<h2 class="form-signin-heading">"Please sign in"</h2>
-		<label for="inputUser" class="sr-only">"Username"</label>
-		input(name)
-		<label for="inputPassword" class="sr-only">"Password"</label>
-		input(pass)
+		label("Username:"){ input(name){ } }
+		<br />
+		label("Password:"){ input(pass) }
+		<br />
+		submitlink action{
+			validate(name.length()>0, "Username required");
+			validate(pass.length()>0, "Password required");
+			return root();
+		}{"Login file"}
+    }
+}
+
+/*
+define main_login(){
+	includeCSS("mycss/signin.css")
+	var name : String
+	var pass : Secret
+	
+	Form{
+		//<h2 class="form-signin-heading">"Please sign in"</h2>
+		//<label for="inputUser" class="sr-only">"Username"</label>
+		//input(name)
+		//<label for="inputPassword" class="sr-only">"Password"</label>
+		//input(pass)
+		label("Username:"){input(name)}
+		label("Password:"){input(pass)}
 	}
+	action save(){
+		
+	}
+}
+*/
+
+define t(){
+    <table class="table table-striped">
+      elements()
+    </table>
+  }
+define r(){
+    <tr>
+      elements()
+    </tr>
+  }
+define c(){
+    <td>
+      elements()
+    </td>
+}
+
+define th(){
+	<th>
+		elements()
+	</th>
 }

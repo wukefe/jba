@@ -1,1 +1,32 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    #background-color: #b0e0e6;
+}
 
+.buttonLeft{
+	width: 25%;
+	float: left;
+}
+.buttonRight{
+	width: 25%;
+	float: right;
+}
+
+.adminFoot{
+	text-align: center;
+}
+
+.btn-outline{
+	color:#563d7c;
+	background-color:transparent;
+	border-color:#563d7c
+}
+
+
+.btn-outline:hover{
+	color:white;
+	background-color:#563d7c;
+	border-color:#563d7c
+}

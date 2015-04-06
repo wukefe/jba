@@ -1,0 +1,20 @@
+
+// admin page HTML version
+<div class="center">
+		<h1>"Please input a markdown file"</h1>
+		<p>
+			label("Content")
+			<textarea class="form-control" rows="5"></textarea>
+		</p>
+		<div class="buttonLeft">
+			<button class="btn btn-sm btn-primary btn-block" onclick="saveContent()">"Save"</button>
+		</div>
+		<div class="buttonRight">
+			<button class="btn btn-sm btn-danger btn-block" onclick="clearContent()">"Cancel"</button>
+		</div>
+		<br/>
+		<hr></hr>
+		table_content()
+	</div>
+	
+	
