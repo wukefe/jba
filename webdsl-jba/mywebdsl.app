@@ -44,6 +44,18 @@ define dslblogpost(){
 			<li>"it is e"</li>
 			</ol>
 	</div>
+	for(u : MyArticle){
+		<div class="blog-post">
+			navigate(page_view(u))[class="blog-post-title"]{"test posts"}
+			//<h2 class="blog-post-title">"test posts"</h2>
+			<p class="blog-post-meta">"April 2015 by Hanfeng"</p>
+			<h3>"test title"</h3>
+
+			<div>
+				output(u.Content)
+			</div>
+	</div>
+	}
 }
 
 define dslcontainer(){
@@ -135,7 +147,7 @@ define main_login(){
 */
 
 define t(){
-    <table class="table table-striped">
+    <table class="table table-hover center">
       elements()
     </table>
   }

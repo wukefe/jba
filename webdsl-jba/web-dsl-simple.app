@@ -4,14 +4,16 @@ description {
   First page
 }
 
-entity MyAdmin{
-	Username :: String (name)
-	Userpass :: Secret
-}
+principal is Admin with credentials Username, Password
 
 entity Admin{
 	Username :: String
 	Password :: String
+}
+
+init{
+	var admin : Admin := Admin{Username := "Admin" Password := "Admin" };
+	admin.save(); //save admin information into the database
 }
 
 section pages
@@ -50,11 +52,43 @@ define page page_login(){
 		log("----");
 		log(uname);
 		log(upass);
-		var u := MyAdmin{
-			Username := uname
-			Userpass := upass.digest()
-		}.save();
-		return page_admin_welcome();
+		var AdminList : List<Admin> := from Admin;
+		validate(authentica(uname,upass,AdminList[0]),"Sorry, wrong password or admin name");
+		//return page_admin_welcome(AdminList[0]);
+		return page_admin_index(AdminList[0]);
 	}
+}
+
+function authentica(name: String, pass : String, u : Admin) : Bool{
+	if(name == u.Username && u.Password == pass){
+		securityContext.principal := u;
+		return(true);
+	}else{return(false);}
+}
+
+access control rules
+//make sure only the admin can go into this page
+rule page root(){
+	true
+}
+
+rule page page_login(){
+	true
+}
+
+rule page page_about(){
+	true
+}
+
+rule page page_admin_welcome(admin : Admin){
+    admin == securityContext.principal
+}
+
+rule page page_admin_index(admin : Admin){
+	admin == securityContext.principal
+}
+
+rule page table_content(admin : Admin){
+	admin == securityContext.principal
 }
 
