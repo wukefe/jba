@@ -10,13 +10,25 @@ entity MyArticle{
 	CreateTime :: String
 }
 
-define page page_admin_welcome(){
+define page page_admin_welcome(admin : Admin){
+	/*
 	for(u:Admin){
 		"name is " output(u.Username)
 		"<br />"
 		"pass is " output(u.Password)
 	}separated-by{ <br />  }
+	*/
+	//var test := MyArticle{Title := "This is Yu"}
+	//output(test.Title)
 	navigate(page_admin_index()){"Enter Admin Console"}
+	form{
+		submit signout(){"Log Out"}
+	}action signout(){
+		log("Log in as ");
+		log("securityContext.principal.name");
+		securityContext.principal := null;
+		return page_login();
+	}
 }
 
 define page page_admin_index(){
