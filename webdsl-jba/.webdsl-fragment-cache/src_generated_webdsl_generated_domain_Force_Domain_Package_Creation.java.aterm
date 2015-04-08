@@ -1,0 +1,1 @@
+("9.7pre",["src-generated/webdsl/generated/domain/Force_Domain_Package_Creation.java"],JavaFile(["src-generated"],CompilationUnit(Some(PackageDec([],PackageName([Id("webdsl"),Id("generated"),Id("domain")]))),[],[ClassDec(ClassDecHead([Public],Id("Force_Domain_Package_Creation"),None,None,None),ClassBody([]))])))

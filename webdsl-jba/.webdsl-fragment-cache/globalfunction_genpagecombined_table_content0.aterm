@@ -1,0 +1,1 @@
+("9.7pre",["src-generated/webdsl/generated/functions/genpagecombined_table_content0_.java"],Function("genpagecombined_table_content0",[],SimpleSort("Bool"){DefValueAnno(False)},Block([Return(False{TypeAnno(SimpleSort("Bool"){DefValueAnno(False)}),HasNullChecks})])){PositionAnno("unknown context"),IsOptimized})

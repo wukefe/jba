@@ -8,6 +8,7 @@ entity MyArticle{
 	Content :: WikiText
 	Author  :: String
 	CreateTime :: String
+	count :: Int
 }
 
 define page page_admin_welcome(admin : Admin){
@@ -18,7 +19,7 @@ define page page_admin_welcome(admin : Admin){
 	}separated-by{ <br />  }
 	navigate(page_admin_index()){"Enter Admin Console"}
 	*/
-	navigate(page_admin_index(admin)){"Enter Admin Console"}
+	/*navigate(page_admin_index(admin)){"Enter Admin Console"}
 	form{
 		submit signout(){"Log Out"}
 	}action signout(){
@@ -26,10 +27,12 @@ define page page_admin_welcome(admin : Admin){
 		log("securityContext.principal.name");
 		securityContext.principal := null;
 		return page_login();
-	}
+	}*/
 }
 
-define page page_admin_index(admin : Admin){
+
+
+define page page_admin_index(admin : Admin, indx : Int){
 	dslinit()
 	var u : MyArticle
 	var x : Text
@@ -37,18 +40,28 @@ define page page_admin_index(admin : Admin){
 	var ucontent : WikiText
 	var id : Int := 1
 	
+	
+	var art : MyArticle := findArt(indx)
+	
 	action saveContent(){
-		var u0 := MyArticle{
+		var ArticleList : List<MyArticle> := from MyArticle;
+		var ucount : Int := ArticleList.length + 1;
+		/*var u0 := MyArticle{
 			Title := utitle
 			Content := ucontent
 			Author := admin.Username
-		}.save();
-		return table_content(admin);
+			count := ucount
+		}.save();*/
+		if(art.count < 0) {
+			art.count := ucount;
+			art.save();
+		}
+		return table_content(admin, ucount);
 	}
 	action clearContent(){
 		// clear
-		utitle := "";
-		ucontent := "";
+		art.Title := "";
+		art.Content := "";
 	}
 	/*<div class="center">
 		<h1>"Please input a markdown file"</h1>
@@ -67,7 +80,7 @@ define page page_admin_index(admin : Admin){
 		table_content()
 	</div>*/
 <div class="row">
-	page_left_bar(admin) //div-col-sm-1
+	page_left_bar(admin,findtotal()) //div-col-sm-1
 	
 	<div class="col-sm-8">
 		<div class="center">
@@ -75,10 +88,10 @@ define page page_admin_index(admin : Admin){
 			<h2>"Writing..."</h2>
 			<p>
 				<label>"Title: "</label>
-				input(utitle)[class="form-control",rows="1"]
+				input(art.Title)[class="form-control",rows="1",style="width:100%"]
 			</p>
 			label("Content")
-			input(ucontent)[class="form-control",rows="15"]
+			input(art.Content)[class="form-control",rows="15"]
 			<br />
 			
 			<div class="buttonLeft">
@@ -94,10 +107,10 @@ define page page_admin_index(admin : Admin){
 </div>
 }
 
-define page table_content(admin : Admin){
+define page table_content(admin : Admin, len : Int){
 	dslinit()
 <div class="row">
-	page_left_bar(admin)
+	page_left_bar(admin, findtotal())
 	
 	<div class="col-sm-8">
 	<div class="center">
@@ -111,36 +124,10 @@ define page table_content(admin : Admin){
 			th{"Added Time"}
 			th{"Modified Time"}
 			th{""}
-		}		
-		/*r{
-			c{"1"}
-			c{"good day good day good day good day ..."}
-			c{"wukefe"}
-			c{"March xx, 2015"}
-			c{
-				form{
-					submit action{ }[class="btn btn-xs btn-primary margin"]{"View"}
-					submit action{ }[class="btn btn-xs btn-primary margin"]{ "Edit" }
-					submit action{ }[class="btn btn-xs btn-danger margin"] { "Delete" }
-				}
-			 }
 		}
-		r{
-			c{"2"}
-			c{"good day good day good day good day ..."}
-			c{"wukefe"}
-			c{"March xx, 2015"}
-			c[class="lastcell"]{
-				form{
-					submit action{ }[class="btn btn-xs btn-primary margin"]{"View"}
-					submit action{ }[class="btn btn-xs btn-primary margin"]{ "Edit" }
-					submit action{ }[class="btn btn-xs btn-danger margin"] { "Delete" }
-				}
-			 }
-		}*/
-		for (u : MyArticle){
+		for (u : MyArticle order by u.count asc){
 			r{
-				c{"id"}
+				c{output(u.count)}
 				c{output(u.Title)}
 				c{output(u.Author)}
 				c{output(u.created)}
@@ -148,15 +135,15 @@ define page table_content(admin : Admin){
 				c[class="lastcell"]{
 					form{
 						submit action{ return page_view(u); }[class="btn btn-xs btn-primary margin",target="_blank"]{"View"}
-						submit action{ }[class="btn btn-xs btn-primary margin"]{ "Edit" }
-						submit action{ }[class="btn btn-xs btn-danger margin"] { "Delete" }
+						submit action{ return page_admin_edit(admin, u.count); }[class="btn btn-xs btn-primary margin"]{ "Edit" }
+						submit action{ u.delete(); refreshID(); return table_content(admin, findtotal());}[class="btn btn-xs btn-danger margin"] { "Delete" }
 					}
 				 }
 			}
 		}
 	}
 	<p class="adminFoot">
-		<a class="btn btn-lg btn-outline" href="#">"Total 2 articles"</a>
+		<a class="btn btn-lg btn-outline" href="#">"Total " output(findtotal()) " articles"</a>
 	</p>
 	/*form[class="center"]{
 		submit action{ return page_admin_index(); } { "Go Back" }
@@ -181,7 +168,15 @@ define d(){
 }
 
 
-define page_left_bar(admin : Admin){
+define page_left_bar(admin : Admin, len : Int){
+	
+	var temp := MyArticle{
+		Title := ""
+	    Content := ""
+	    Author  := ""
+	    CreateTime := ""
+	}
+	
 	action signout(){
 		securityContext.principal := null;
 		return page_login();
@@ -196,9 +191,11 @@ define page_left_bar(admin : Admin){
 		<hr></hr>
         <div>
             <h4>"Dashboard"</h4>
-            navigate(page_admin_index(admin)){"Publish Articles"}
+            navigate(page_admin_index(admin,-1)){"Publish Articles"}
             <br />
-            navigate(table_content(admin)){"Manage Articles"}
+            navigate(table_content(admin,len)){"Manage Articles"}
+            <br />
+            navigate(root()){"Back to Home"}
         </div>
 		  <hr></hr>
 		  <div>
@@ -216,4 +213,79 @@ define page_left_bar(admin : Admin){
 		  </div>
 		  <hr></hr>
      </div>
+}
+
+function findArt(indx : Int) : MyArticle{
+	var ArticleList : List<MyArticle> := from MyArticle;
+	if (indx < 0) {
+		return MyArticle{count:=-1};
+	}
+	return ArticleList[indx];
+}
+
+function findtotal() : Int{
+	var ArticleList : List<MyArticle> := from MyArticle;
+	return ArticleList.length;
+}
+
+function refreshID(){
+	var cnt : Int := 1;
+	for (u : MyArticle order by u.count asc){
+		u.count := cnt;
+		cnt := cnt + 1;
+	}
+}
+
+
+define page page_admin_edit(admin : Admin, count : Int){
+	dslinit()
+	var u : MyArticle
+	var x : Text
+	var y : WikiText
+	var z : Int 
+	
+	action saveContent(){
+		for(article : MyArticle){
+			if(count == article.count){
+				article.Title := x;
+				article.Content := y;
+				var ArticleList : List<MyArticle> := from MyArticle;
+				var len : Int := ArticleList.length;
+				return table_content(admin,len);
+			}
+		}
+		
+	}
+	action clearContent(){
+		// clear
+}	
+
+<div class="row">
+	page_left_bar(admin,z) //div-col-sm-1
+	
+	
+	<div class="col-sm-8">
+		<div class="center">
+		form{
+			<h2>"Writing..."</h2>
+			<p>
+				<label>"Title: "</label>
+				input(x)[class="form-control",rows="1"]
+			</p>
+			label("Content")
+			input(y)[class="form-control",rows="15"]
+			<br />
+			
+			<div class="buttonLeft">
+				submit saveContent()[class="btn btn-sm btn-primary btn-block"]{"Save"}
+			</div>
+			
+			<div class="buttonRight">
+				submit clearContent()[class="btn btn-sm btn-danger btn-block"]{"Cancel"}
+			</div>
+		}
+		</div>
+	</div>
+	
+</div>
 }

@@ -44,7 +44,7 @@ define dslblogpost(){
 			<li>"it is e"</li>
 			</ol>
 	</div>*/
-	for(u : MyArticle){
+	for(u : MyArticle order by u.count asc){
 		<div class="blog-post">
 			//navigate(view_article(u))[class="blog-post-title"]{output(u.Title)}
 			//<h2 class="blog-post-title">output(u.Title)</h2>
@@ -100,7 +100,7 @@ define dslsidebar(){
 
 define dslfooter(){
 	<footer class="blog-footer">
-      <p>"Blog template built for" <a href="http://getbootstrap.com">"Bootstrap"</a> "by" <a href="https://twitter.com/mdo">"@mdo"</a>"."</p>
+      <p>"Blog template built for" <a href="http://getbootstrap.com">"Bootstrap"</a> " by " <a href="https://twitter.com/mdo">"@mdo"</a>"."</p>
       <p>
         <a href="#">"Back to top"</a>
       </p>

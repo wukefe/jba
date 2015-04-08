@@ -61,7 +61,7 @@ define page page_login(){
 		var AdminList : List<Admin> := from Admin;
 		validate(authentica(uname,upass,AdminList[0]),"Sorry, wrong password or admin name");
 		//return page_admin_welcome(AdminList[0]);
-		return page_admin_index(AdminList[0]);
+		return page_admin_index(AdminList[0],-1);
 	}
 }
 
@@ -94,10 +94,14 @@ rule page page_admin_welcome(admin : Admin){
     admin == securityContext.principal
 }
 
-rule page page_admin_index(admin : Admin){
+rule page page_admin_index(admin : Admin, indx : Int){
 	admin == securityContext.principal
 }
 
-rule page table_content(admin : Admin){
+rule page table_content(admin : Admin, len : Int){
+	admin == securityContext.principal
+}
+
+rule page page_admin_edit(admin : Admin, count : Int){
 	admin == securityContext.principal
 }

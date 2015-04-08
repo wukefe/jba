@@ -1,0 +1,1 @@
+("9.7pre",["src-generated/utils/HibernateUtilConfigured.java"],(["Admin","dummy_webdsl_entity","MyArticle","QueuedEmail","RequestLogEntry","SecurityContext","SessionManager","SessionMessage","ValidationException","ValidationExceptionMultiple"],[("ValidationExceptionMultiple","List","exceptions"),("SessionManager","List","messages")],NoQueryOptimization))
