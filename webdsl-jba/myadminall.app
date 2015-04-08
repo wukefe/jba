@@ -33,16 +33,22 @@ define page page_admin_index(admin : Admin){
 	dslinit()
 	var u : MyArticle
 	var x : Text
-	var y : WikiText
+	var utitle : WikiText
+	var ucontent : WikiText
+	var id : Int := 1
 	
 	action saveContent(){
 		var u0 := MyArticle{
-			Content := y
+			Title := utitle
+			Content := ucontent
+			Author := admin.Username
 		}.save();
 		return table_content(admin);
 	}
 	action clearContent(){
 		// clear
+		utitle := "";
+		ucontent := "";
 	}
 	/*<div class="center">
 		<h1>"Please input a markdown file"</h1>
@@ -64,9 +70,15 @@ define page page_admin_index(admin : Admin){
 	page_left_bar(admin) //div-col-sm-1
 	
 	<div class="col-sm-8">
-		form[class="center"]{
-			label("input")
-			input(y)[class="form-control",rows="10"]
+		<div class="center">
+		form{
+			<h2>"Writing..."</h2>
+			<p>
+				<label>"Title: "</label>
+				input(utitle)[class="form-control",rows="1"]
+			</p>
+			label("Content")
+			input(ucontent)[class="form-control",rows="15"]
 			<br />
 			
 			<div class="buttonLeft">
@@ -77,6 +89,7 @@ define page page_admin_index(admin : Admin){
 				submit clearContent()[class="btn btn-sm btn-danger btn-block"]{"Cancel"}
 			</div>
 		}
+		</div>
 	</div>
 </div>
 }
@@ -87,6 +100,8 @@ define page table_content(admin : Admin){
 	page_left_bar(admin)
 	
 	<div class="col-sm-8">
+	<div class="center">
+	<h2>"Manage Articles"</h2>
 	t{
 		r{
 			//th{""}
@@ -94,9 +109,10 @@ define page table_content(admin : Admin){
 			th{"Title"}
 			th{"Author"}
 			th{"Added Time"}
+			th{"Modified Time"}
 			th{""}
 		}		
-		r{
+		/*r{
 			c{"1"}
 			c{"good day good day good day good day ..."}
 			c{"wukefe"}
@@ -121,16 +137,17 @@ define page table_content(admin : Admin){
 					submit action{ }[class="btn btn-xs btn-danger margin"] { "Delete" }
 				}
 			 }
-		}
+		}*/
 		for (u : MyArticle){
 			r{
-				c{"xx"}
-				c{output(u.Content)}
-				c{"wukefe"}
-				c{"April xx, 2015"}
+				c{"id"}
+				c{output(u.Title)}
+				c{output(u.Author)}
+				c{output(u.created)}
+				c{output(u.modified)}
 				c[class="lastcell"]{
 					form{
-						submit action{ return page_view(u); }[class="btn btn-xs btn-primary margin"]{"View"}
+						submit action{ return page_view(u); }[class="btn btn-xs btn-primary margin",target="_blank"]{"View"}
 						submit action{ }[class="btn btn-xs btn-primary margin"]{ "Edit" }
 						submit action{ }[class="btn btn-xs btn-danger margin"] { "Delete" }
 					}
@@ -144,15 +161,17 @@ define page table_content(admin : Admin){
 	/*form[class="center"]{
 		submit action{ return page_admin_index(); } { "Go Back" }
 	}*/
+	</div>
    </div>
 </div>   
 }
 
-
-define page page_view(u:MyArticle){
-	d{
-		output(u.Content)
+function cut(s : String) : String{
+	if (s.length() > 20){
+		//cut string
+		return s;
 	}
+	return s;
 }
 
 define d(){
@@ -193,7 +212,7 @@ define page_left_bar(admin : Admin){
 		  <hr></hr>
 		  <div>
 		  //<h4><a href="#">"Logout"</a></h4>
-		  form{ submit signout(){"Log Out"} }
+		  form{ submitlink signout(){"Log Out"} }
 		  </div>
 		  <hr></hr>
      </div>

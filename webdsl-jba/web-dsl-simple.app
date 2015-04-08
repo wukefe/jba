@@ -30,6 +30,12 @@ define page page_about(){
 	main_login()
 }
 
+define page page_view(u : MyArticle){
+	dslinit()
+	dslheader()
+	my_view_body(u)
+}
+
 define page page_login(){
 	dslinit()
 	includeCSS("mycss/signin.css")
@@ -80,6 +86,10 @@ rule page page_about(){
 	true
 }
 
+rule page page_view(u : MyArticle){
+	true
+}
+
 rule page page_admin_welcome(admin : Admin){
     admin == securityContext.principal
 }
@@ -91,4 +101,3 @@ rule page page_admin_index(admin : Admin){
 rule page table_content(admin : Admin){
 	admin == securityContext.principal
 }
-

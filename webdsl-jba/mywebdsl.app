@@ -29,7 +29,7 @@ define dslheader(){
 
 
 define dslblogpost(){
-	<div class="blog-post">
+	/*<div class="blog-post">
 			<h2 class="blog-post-title">"Assignment 1"</h2>
 			<p class="blog-post-meta">"March 13, 2015 by "<a href="#">"Hanfeng"</a></p>
 			<h3>"This is assignment 1"</h3>
@@ -43,17 +43,18 @@ define dslblogpost(){
 			<li>"it is d"</li>
 			<li>"it is e"</li>
 			</ol>
-	</div>
+	</div>*/
 	for(u : MyArticle){
 		<div class="blog-post">
-			navigate(page_view(u))[class="blog-post-title"]{"test posts"}
-			//<h2 class="blog-post-title">"test posts"</h2>
-			<p class="blog-post-meta">"April 2015 by Hanfeng"</p>
-			<h3>"test title"</h3>
+			//navigate(view_article(u))[class="blog-post-title"]{output(u.Title)}
+			//<h2 class="blog-post-title">output(u.Title)</h2>
+			form{ submitlink action{ return page_view(u); }[class="blog-post-title",target="_blank"]{output(u.Title)} }
+			<p class="blog-post-meta">output(u.created) " by " <a>output(u.Author)</a></p>
+			/*<h3>"test title"</h3>
 
 			<div>
 				output(u.Content)
-			</div>
+			</div>*/
 	</div>
 	}
 }
@@ -77,7 +78,7 @@ define dslsidebar(){
 	<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>"About"</h4>
-            <p>"This is a course project on "<em>"CISC 836"</em></p>
+            <p>"Final presentation: April 8, 2015"</p>
           </div>
           <div class="sidebar-module">
             <h4>"Archives"</h4>
@@ -146,8 +147,27 @@ define main_login(){
 }
 */
 
+/*
+ for page_view
+*/
+
+define my_view_body(u : MyArticle){
+	<div class="container">
+		<div class="row">
+		<div class="blog-post">
+			<h2 class="blog-post-title-view">output(u.Title)</h2>
+			<p class="blog-post-meta-view">output(u.created) " by " <a>output(u.Author)</a></p>
+			<hr></hr>
+			<div class="blog-view-format">
+				output(u.Content)
+			</div>
+		</div>
+		</div>
+	</div>
+}
+
 define t(){
-    <table class="table table-hover center">
+    <table class="table table-hover">
       elements()
     </table>
   }
