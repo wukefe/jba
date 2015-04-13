@@ -41,23 +41,23 @@ public @SuppressWarnings("all") class table_contentAdmin_Int_s_ad2String_MyArtic
     { 
       if(i == 2)
       { 
-        java.util.ArrayList<webdsl.generated.domain.MyArticle> elems0 = new java.util.ArrayList<webdsl.generated.domain.MyArticle>();
+        java.util.ArrayList<webdsl.generated.domain.MyArticle> elems2 = new java.util.ArrayList<webdsl.generated.domain.MyArticle>();
         for(org.webdsl.WebDSLEntity ent : elems)
         { 
           if(ent.instanceOf("MyArticle"))
           { 
-            elems0.add((webdsl.generated.domain.MyArticle)ent);
+            elems2.add((webdsl.generated.domain.MyArticle)ent);
           }
         }
       }
       if(i == 4)
       { 
-        java.util.ArrayList<webdsl.generated.domain.Admin> elems1 = new java.util.ArrayList<webdsl.generated.domain.Admin>();
+        java.util.ArrayList<webdsl.generated.domain.Admin> elems3 = new java.util.ArrayList<webdsl.generated.domain.Admin>();
         for(org.webdsl.WebDSLEntity ent : elems)
         { 
           if(ent.instanceOf("Admin"))
           { 
-            elems1.add((webdsl.generated.domain.Admin)ent);
+            elems3.add((webdsl.generated.domain.Admin)ent);
           }
         }
       }
@@ -184,7 +184,7 @@ public @SuppressWarnings("all") class table_contentAdmin_Int_s_ad2String_MyArtic
       { 
         try
         { 
-          handleTemplateCall(phase, inForLoop, forelementcounter, "tcall0", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"table_contentAdmin_Int_ia2_" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("table_contentAdmin_Int_s_ad2String_MyArticle_Int_Admin_s_ad0String_Admin_Int_MyArticle_String", getElementsContext(), new Object[]{admin_, len_, u_, table_contentAdmin_Int_ia20_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
+          handleTemplateCall(phase, inForLoop, forelementcounter, "tcall6", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"table_contentAdmin_Int_ia2_" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("table_contentAdmin_Int_s_ad2String_MyArticle_Int_Admin_s_ad0String_Admin_Int_MyArticle_String", getElementsContext(), new Object[]{admin_, len_, u_, table_contentAdmin_Int_ia20_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
         }
         catch(RuntimeException ex)
         { 

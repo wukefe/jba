@@ -459,7 +459,7 @@ import webdsl.generated.domain.SessionManager;
         { 
           try
           { 
-            response.getWriter().write("build-id:" + "3e0d1f12-41b6-4669-8a56-283c5f76e32f");
+            response.getWriter().write("build-id:" + "846eefaa-3908-459a-b21d-c4be68e9d975");
           }
           catch(IOException ioe)
           { 

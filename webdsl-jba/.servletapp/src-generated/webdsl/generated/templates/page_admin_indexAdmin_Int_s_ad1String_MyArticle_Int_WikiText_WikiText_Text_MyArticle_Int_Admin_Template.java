@@ -41,12 +41,12 @@ public @SuppressWarnings("all") class page_admin_indexAdmin_Int_s_ad1String_MyAr
     { 
       if(i == 9)
       { 
-        java.util.ArrayList<webdsl.generated.domain.Admin> elems2 = new java.util.ArrayList<webdsl.generated.domain.Admin>();
+        java.util.ArrayList<webdsl.generated.domain.Admin> elems8 = new java.util.ArrayList<webdsl.generated.domain.Admin>();
         for(org.webdsl.WebDSLEntity ent : elems)
         { 
           if(ent.instanceOf("Admin"))
           { 
-            elems2.add((webdsl.generated.domain.Admin)ent);
+            elems8.add((webdsl.generated.domain.Admin)ent);
           }
         }
       }
@@ -238,7 +238,7 @@ public @SuppressWarnings("all") class page_admin_indexAdmin_Int_s_ad1String_MyAr
       { 
         try
         { 
-          handleTemplateCall(phase, inForLoop, forelementcounter, "tcall6", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"page_admin_indexAdmin_Int_clearContent2" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("page_admin_indexAdmin_Int_s_ad1String_MyArticle_Int_WikiText_WikiText_Text_MyArticle_Int_A34String_Admin_Int_MyArticle_Text_WikiText_WikiText_Int_MyArticle_String", getElementsContext(), new Object[]{admin_, indx_, u_, x_, utitle_, ucontent_, id_, art_, page_admin_indexAdmin_Int_clearContent10_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
+          handleTemplateCall(phase, inForLoop, forelementcounter, "tcall15", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"page_admin_indexAdmin_Int_clearContent2" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("page_admin_indexAdmin_Int_s_ad1String_MyArticle_Int_WikiText_WikiText_Text_MyArticle_Int_A34String_Admin_Int_MyArticle_Text_WikiText_WikiText_Int_MyArticle_String", getElementsContext(), new Object[]{admin_, indx_, u_, x_, utitle_, ucontent_, id_, art_, page_admin_indexAdmin_Int_clearContent10_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
         }
         catch(RuntimeException ex)
         { 

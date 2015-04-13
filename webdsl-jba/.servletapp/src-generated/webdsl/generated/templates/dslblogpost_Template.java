@@ -102,23 +102,23 @@ public @SuppressWarnings("all") class dslblogpost_Template extends TemplateServl
     boolean inForLoop = false;
     int forLoopCounter = 0;
     PrintWriter out = ThreadLocalOut.peek();
-    java.util.List<webdsl.generated.domain.MyArticle> list2 = utils.HibernateUtil.getCurrentSession().createCriteria(webdsl.generated.domain.MyArticle.class).list();
-    prefetchFor0(list2, true);
+    java.util.List<webdsl.generated.domain.MyArticle> list1 = utils.HibernateUtil.getCurrentSession().createCriteria(webdsl.generated.domain.MyArticle.class).list();
+    prefetchFor0(list1, true);
     inForLoop = true;
     forLoopCounter++;
-    java.util.Collections.sort(list2, new java.util.Comparator<webdsl.generated.domain.MyArticle>()
+    java.util.Collections.sort(list1, new java.util.Comparator<webdsl.generated.domain.MyArticle>()
                                       { 
                                         public int compare(webdsl.generated.domain.MyArticle o1, webdsl.generated.domain.MyArticle o2)
                                         { 
-                                          return o1.getCount().compareTo(o2.getCount());
+                                          return o2.getCount().compareTo(o1.getCount());
                                         }
                                       });
-    prefetchFor0(list2, false);
+    prefetchFor0(list1, false);
     int separatorindex0 = 0;
-    Object[] array1 = list2.toArray();
-    for(int i1 = 0; i1 < array1.length; i1++)
+    Object[] array0 = list1.toArray();
+    for(int i0 = 0; i0 < array0.length; i0++)
     { 
-      webdsl.generated.domain.MyArticle u_ = (webdsl.generated.domain.MyArticle)array1[i1];
+      webdsl.generated.domain.MyArticle u_ = (webdsl.generated.domain.MyArticle)array0[i0];
       fallbackcounter += 1;
       if(org.webdsl.WebDSLEntity.class.isInstance(u_))
       { 

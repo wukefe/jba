@@ -54,6 +54,7 @@ define page page_admin_index(admin : Admin, indx : Int){
 		}.save();*/
 		if(art.count < 0) {
 			art.count := ucount;
+			art.Author := admin.Username;
 			art.save();
 		}
 		return table_content(admin, ucount);

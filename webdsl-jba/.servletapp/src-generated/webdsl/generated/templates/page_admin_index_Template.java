@@ -41,12 +41,12 @@ public @SuppressWarnings("all") class page_admin_index_Template extends Template
     { 
       if(i == 1)
       { 
-        java.util.ArrayList<webdsl.generated.domain.Admin> elems4 = new java.util.ArrayList<webdsl.generated.domain.Admin>();
+        java.util.ArrayList<webdsl.generated.domain.Admin> elems10 = new java.util.ArrayList<webdsl.generated.domain.Admin>();
         for(org.webdsl.WebDSLEntity ent : elems)
         { 
           if(ent.instanceOf("Admin"))
           { 
-            elems4.add((webdsl.generated.domain.Admin)ent);
+            elems10.add((webdsl.generated.domain.Admin)ent);
           }
         }
       }
@@ -218,7 +218,7 @@ public @SuppressWarnings("all") class page_admin_index_Template extends Template
     PrintWriter out = ThreadLocalOut.peek();
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall12", "dslinit", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{}, "dslinit"), new Environment(env).putWithcall("elements#dslinit", new utils.TemplateCall("elementsempty", null, null, null)), "dslinit", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall21", "dslinit", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{}, "dslinit"), new Environment(env).putWithcall("elements#dslinit", new utils.TemplateCall("elementsempty", null, null, null)), "dslinit", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 
@@ -243,11 +243,11 @@ public @SuppressWarnings("all") class page_admin_index_Template extends Template
     }
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall14", "page_left_barAdmin_Int", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{admin_, webdsl.generated.functions.findtotal_.findtotal_()}, "page_left_barAdmin_Int"), new Environment(env).putWithcall("elements#page_left_barAdmin_Int", new utils.TemplateCall("elementsempty", null, null, null)), "page_left_barAdmin_Int", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall23", "page_left_barAdmin_Int", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{admin_, webdsl.generated.functions.findtotal_.findtotal_()}, "page_left_barAdmin_Int"), new Environment(env).putWithcall("elements#page_left_barAdmin_Int", new utils.TemplateCall("elementsempty", null, null, null)), "page_left_barAdmin_Int", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 
-      printTemplateCallException(ex, "page_left_barAdmin_Int(admin, findtotal()) at ../myadminall.app:83/3");
+      printTemplateCallException(ex, "page_left_barAdmin_Int(admin, findtotal()) at ../myadminall.app:84/3");
     }
     if(RENDER_PHASE == phase)
     { 
@@ -421,11 +421,11 @@ public @SuppressWarnings("all") class page_admin_index_Template extends Template
       utils.TemplateCall.putAttributeMergeClassOrStyle(attrsmapout, "class", "form-control");
       utils.TemplateCall.putAttributeMergeClassOrStyle(attrsmapout, "rows", "1");
       utils.TemplateCall.putAttributeMergeClassOrStyle(attrsmapout, "style", "width:100%");
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall16", "inputString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{new RefArg_inputString_1_page_admin_indexpc0(art_)}, "inputString"), new Environment(env).putWithcall("elements#inputString", new utils.TemplateCall("elementsempty", null, null, null)), "inputString", attrsmapout);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall25", "inputString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{new RefArg_inputString_1_page_admin_indexpc0(art_)}, "inputString"), new Environment(env).putWithcall("elements#inputString", new utils.TemplateCall("elementsempty", null, null, null)), "inputString", attrsmapout);
     }
     catch(RuntimeException ex)
     { 
-      printTemplateCallException(ex, "inputString(art.Title) at ../myadminall.app:91/6");
+      printTemplateCallException(ex, "inputString(art.Title) at ../myadminall.app:92/6");
     }
     if(RENDER_PHASE == phase)
     { 
@@ -433,11 +433,11 @@ public @SuppressWarnings("all") class page_admin_index_Template extends Template
     }
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall18", "labelString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"Content"}, "labelString"), new Environment(env).putWithcall("elements#labelString", new utils.TemplateCall("elementsempty", null, null, null)), "labelString", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall27", "labelString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"Content"}, "labelString"), new Environment(env).putWithcall("elements#labelString", new utils.TemplateCall("elementsempty", null, null, null)), "labelString", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 
-      printTemplateCallException(ex, "labelString(\"Content\") at ../myadminall.app:93/5");
+      printTemplateCallException(ex, "labelString(\"Content\") at ../myadminall.app:94/5");
     }
     try
     { 
@@ -448,11 +448,11 @@ public @SuppressWarnings("all") class page_admin_index_Template extends Template
       Map<String, String> attrsmapout = new HashMap<String, String>();
       utils.TemplateCall.putAttributeMergeClassOrStyle(attrsmapout, "class", "form-control");
       utils.TemplateCall.putAttributeMergeClassOrStyle(attrsmapout, "rows", "15");
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall20", "inputWikiText", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{new RefArg_inputWikiText_1_page_admin_indexpc1(art_)}, "inputWikiText"), new Environment(env).putWithcall("elements#inputWikiText", new utils.TemplateCall("elementsempty", null, null, null)), "inputWikiText", attrsmapout);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall29", "inputWikiText", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{new RefArg_inputWikiText_1_page_admin_indexpc1(art_)}, "inputWikiText"), new Environment(env).putWithcall("elements#inputWikiText", new utils.TemplateCall("elementsempty", null, null, null)), "inputWikiText", attrsmapout);
     }
     catch(RuntimeException ex)
     { 
-      printTemplateCallException(ex, "inputWikiText(art.Content) at ../myadminall.app:94/5");
+      printTemplateCallException(ex, "inputWikiText(art.Content) at ../myadminall.app:95/5");
     }
     if(RENDER_PHASE == phase)
     { 
@@ -489,7 +489,7 @@ public @SuppressWarnings("all") class page_admin_index_Template extends Template
     }
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall22", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"page_admin_indexAdmin_Int_saveContent1" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("page_admin_indexAdmin_Int_s_ad0String_MyArticle_Int_WikiText_WikiText_Text_MyArticle_Int_Admin", getElementsContext(), new Object[]{new RefArg_page_admin_index_Template0(page_admin_index_Template.this), new RefArg_page_admin_index_Template1(page_admin_index_Template.this), new RefArg_page_admin_index_Template2(page_admin_index_Template.this), new RefArg_page_admin_index_Template3(page_admin_index_Template.this), new RefArg_page_admin_index_Template4(page_admin_index_Template.this), new RefArg_page_admin_index_Template5(page_admin_index_Template.this), indx_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall31", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"page_admin_indexAdmin_Int_saveContent1" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("page_admin_indexAdmin_Int_s_ad0String_MyArticle_Int_WikiText_WikiText_Text_MyArticle_Int_Admin", getElementsContext(), new Object[]{new RefArg_page_admin_index_Template0(page_admin_index_Template.this), new RefArg_page_admin_index_Template1(page_admin_index_Template.this), new RefArg_page_admin_index_Template2(page_admin_index_Template.this), new RefArg_page_admin_index_Template3(page_admin_index_Template.this), new RefArg_page_admin_index_Template4(page_admin_index_Template.this), new RefArg_page_admin_index_Template5(page_admin_index_Template.this), indx_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 
@@ -518,7 +518,7 @@ public @SuppressWarnings("all") class page_admin_index_Template extends Template
     }
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall25", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"page_admin_indexAdmin_Int_clearContent1" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("page_admin_indexAdmin_Int_s_ad1String_MyArticle_Int_WikiText_WikiText_Text_MyArticle_Int_Admin", getElementsContext(), new Object[]{new RefArg_page_admin_index_Template0(page_admin_index_Template.this), new RefArg_page_admin_index_Template1(page_admin_index_Template.this), new RefArg_page_admin_index_Template2(page_admin_index_Template.this), new RefArg_page_admin_index_Template3(page_admin_index_Template.this), new RefArg_page_admin_index_Template4(page_admin_index_Template.this), new RefArg_page_admin_index_Template5(page_admin_index_Template.this), indx_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall34", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"page_admin_indexAdmin_Int_clearContent1" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("page_admin_indexAdmin_Int_s_ad1String_MyArticle_Int_WikiText_WikiText_Text_MyArticle_Int_Admin", getElementsContext(), new Object[]{new RefArg_page_admin_index_Template0(page_admin_index_Template.this), new RefArg_page_admin_index_Template1(page_admin_index_Template.this), new RefArg_page_admin_index_Template2(page_admin_index_Template.this), new RefArg_page_admin_index_Template3(page_admin_index_Template.this), new RefArg_page_admin_index_Template4(page_admin_index_Template.this), new RefArg_page_admin_index_Template5(page_admin_index_Template.this), indx_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 

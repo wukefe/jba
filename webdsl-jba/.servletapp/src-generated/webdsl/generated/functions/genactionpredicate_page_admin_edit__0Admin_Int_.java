@@ -13,9 +13,9 @@ import org.webdsl.lang.Environment;
 
 @SuppressWarnings("all") public class genactionpredicate_page_admin_edit__0Admin_Int_  implements org.webdsl.lang.IFunction
 { 
-  public static Boolean genactionpredicate_page_admin_edit__0Admin_Int_(webdsl.generated.domain.Admin genuniquevar2_, Integer genuniquevar3_)
+  public static Boolean genactionpredicate_page_admin_edit__0Admin_Int_(webdsl.generated.domain.Admin genuniquevar4_, Integer genuniquevar5_)
   { 
-    return org.webdsl.tools.Utils.equal(genuniquevar2_, ((SecurityContext)ThreadLocalPage.getEnv().getSessionVariable("securityContext")).getPrincipal());
+    return org.webdsl.tools.Utils.equal(genuniquevar4_, ((SecurityContext)ThreadLocalPage.getEnv().getSessionVariable("securityContext")).getPrincipal());
   }
 
   public Object apply(Object[] args)

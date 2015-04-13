@@ -33,6 +33,7 @@ public class page_admin_indexAdmin_Int_saveContent0 extends TemplateAction
                                                                                  if(!(org.webdsl.tools.Utils.equal(art_.getCount(), null) || org.webdsl.tools.Utils.equal(0, null)) && art_.getCount() < 0)
                                                                                  { 
                                                                                    art_.setCount(ucount_);
+                                                                                   art_.setAuthor(admin_.getUsername());
                                                                                    art_.save("MyArticle");
                                                                                  }
                                                                                  else

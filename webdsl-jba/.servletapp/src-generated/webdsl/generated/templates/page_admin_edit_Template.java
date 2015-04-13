@@ -41,12 +41,12 @@ public @SuppressWarnings("all") class page_admin_edit_Template extends TemplateS
     { 
       if(i == 1)
       { 
-        java.util.ArrayList<webdsl.generated.domain.Admin> elems5 = new java.util.ArrayList<webdsl.generated.domain.Admin>();
+        java.util.ArrayList<webdsl.generated.domain.Admin> elems12 = new java.util.ArrayList<webdsl.generated.domain.Admin>();
         for(org.webdsl.WebDSLEntity ent : elems)
         { 
           if(ent.instanceOf("Admin"))
           { 
-            elems5.add((webdsl.generated.domain.Admin)ent);
+            elems12.add((webdsl.generated.domain.Admin)ent);
           }
         }
       }
@@ -192,11 +192,11 @@ public @SuppressWarnings("all") class page_admin_edit_Template extends TemplateS
     PrintWriter out = ThreadLocalOut.peek();
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall28", "dslinit", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{}, "dslinit"), new Environment(env).putWithcall("elements#dslinit", new utils.TemplateCall("elementsempty", null, null, null)), "dslinit", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall62", "dslinit", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{}, "dslinit"), new Environment(env).putWithcall("elements#dslinit", new utils.TemplateCall("elementsempty", null, null, null)), "dslinit", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 
-      printTemplateCallException(ex, "dslinit() at ../myadminall.app:241/3");
+      printTemplateCallException(ex, "dslinit() at ../myadminall.app:242/3");
     }
     if(RENDER_PHASE == phase)
     { 
@@ -217,11 +217,11 @@ public @SuppressWarnings("all") class page_admin_edit_Template extends TemplateS
     }
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall30", "page_left_barAdmin_Int", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{admin_, z_}, "page_left_barAdmin_Int"), new Environment(env).putWithcall("elements#page_left_barAdmin_Int", new utils.TemplateCall("elementsempty", null, null, null)), "page_left_barAdmin_Int", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall64", "page_left_barAdmin_Int", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{admin_, z_}, "page_left_barAdmin_Int"), new Environment(env).putWithcall("elements#page_left_barAdmin_Int", new utils.TemplateCall("elementsempty", null, null, null)), "page_left_barAdmin_Int", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 
-      printTemplateCallException(ex, "page_left_barAdmin_Int(admin, z) at ../myadminall.app:264/3");
+      printTemplateCallException(ex, "page_left_barAdmin_Int(admin, z) at ../myadminall.app:265/3");
     }
     if(RENDER_PHASE == phase)
     { 
@@ -262,21 +262,21 @@ public @SuppressWarnings("all") class page_admin_edit_Template extends TemplateS
       org.webdsl.logging.Logger.error("Invalid nested <form> tag detected in DOM at URL: " + threadLocalPageCached.getRequest().getRequestURL() + "\n Enclosing form found in " + threadLocalPageCached.getEnclosingForm() + "\n Nested form found in " + getTemplateSignature());
     }
     threadLocalPageCached.enterForm(getTemplateSignature());
-    ident = (inForLoop ? forelementcounter : "") + ("form1" + getUniqueId());
+    ident = (inForLoop ? forelementcounter : "") + ("form2" + getUniqueId());
     threadLocalPageCached.setFormIdent(ident);
     if(threadLocalPageCached.getParammap().get(ident) != null)
     { 
       threadLocalPageCached.setInSubmittedForm(true);
     }
-    java.io.StringWriter sw3 = null;
-    java.io.StringWriter sw2 = null;
+    java.io.StringWriter sw5 = null;
+    java.io.StringWriter sw4 = null;
     if(RENDER_PHASE == phase)
     { 
       threadLocalPageCached.formRequiresMultipartEnc = false;
       if(threadLocalPageCached.inSubmittedForm() && threadLocalPageCached.isValidationFormRerender())
       { 
-        sw3 = new java.io.StringWriter();
-        out = new java.io.PrintWriter(sw3);
+        sw5 = new java.io.StringWriter();
+        out = new java.io.PrintWriter(sw5);
         ThreadLocalOut.push(out);
       }
       out.print("<form name=\"" + ident + "\" id=\"" + ident + "\" action=\"" + utils.HTMLFilter.filter(threadLocalPageCached.getPageUrlWithParams() + threadLocalPageCached.getExtraQueryAruments("?")) + "\" accept-charset=\"UTF-8\" method=\"POST\"");
@@ -292,8 +292,8 @@ public @SuppressWarnings("all") class page_admin_edit_Template extends TemplateS
         AttributeCollectionLookup.getAttributeCollection("form", classattrs, styleattrs, ignore, out);
         utils.TemplateCall.printClassStyleAttributes(classattrs, styleattrs, out);
       }
-      sw2 = new java.io.StringWriter();
-      out = new java.io.PrintWriter(sw2);
+      sw4 = new java.io.StringWriter();
+      out = new java.io.PrintWriter(sw4);
       ThreadLocalOut.push(out);
       out.print(">");
       out.print("<input type=\"hidden\" name=\"" + ident + "\" value=\"1\" />");
@@ -394,11 +394,11 @@ public @SuppressWarnings("all") class page_admin_edit_Template extends TemplateS
       Map<String, String> attrsmapout = new HashMap<String, String>();
       utils.TemplateCall.putAttributeMergeClassOrStyle(attrsmapout, "class", "form-control");
       utils.TemplateCall.putAttributeMergeClassOrStyle(attrsmapout, "rows", "1");
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall32", "inputText", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{new RefArg_page_admin_edit_Template0(page_admin_edit_Template.this)}, "inputText"), new Environment(env).putWithcall("elements#inputText", new utils.TemplateCall("elementsempty", null, null, null)), "inputText", attrsmapout);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall66", "inputText", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{new RefArg_page_admin_edit_Template0(page_admin_edit_Template.this)}, "inputText"), new Environment(env).putWithcall("elements#inputText", new utils.TemplateCall("elementsempty", null, null, null)), "inputText", attrsmapout);
     }
     catch(RuntimeException ex)
     { 
-      printTemplateCallException(ex, "inputText(x) at ../myadminall.app:273/6");
+      printTemplateCallException(ex, "inputText(x) at ../myadminall.app:274/6");
     }
     if(RENDER_PHASE == phase)
     { 
@@ -406,11 +406,11 @@ public @SuppressWarnings("all") class page_admin_edit_Template extends TemplateS
     }
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall34", "labelString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"Content"}, "labelString"), new Environment(env).putWithcall("elements#labelString", new utils.TemplateCall("elementsempty", null, null, null)), "labelString", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall68", "labelString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"Content"}, "labelString"), new Environment(env).putWithcall("elements#labelString", new utils.TemplateCall("elementsempty", null, null, null)), "labelString", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 
-      printTemplateCallException(ex, "labelString(\"Content\") at ../myadminall.app:275/5");
+      printTemplateCallException(ex, "labelString(\"Content\") at ../myadminall.app:276/5");
     }
     try
     { 
@@ -421,11 +421,11 @@ public @SuppressWarnings("all") class page_admin_edit_Template extends TemplateS
       Map<String, String> attrsmapout = new HashMap<String, String>();
       utils.TemplateCall.putAttributeMergeClassOrStyle(attrsmapout, "class", "form-control");
       utils.TemplateCall.putAttributeMergeClassOrStyle(attrsmapout, "rows", "15");
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall36", "inputWikiText", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{new RefArg_page_admin_edit_Template1(page_admin_edit_Template.this)}, "inputWikiText"), new Environment(env).putWithcall("elements#inputWikiText", new utils.TemplateCall("elementsempty", null, null, null)), "inputWikiText", attrsmapout);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall70", "inputWikiText", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{new RefArg_page_admin_edit_Template1(page_admin_edit_Template.this)}, "inputWikiText"), new Environment(env).putWithcall("elements#inputWikiText", new utils.TemplateCall("elementsempty", null, null, null)), "inputWikiText", attrsmapout);
     }
     catch(RuntimeException ex)
     { 
-      printTemplateCallException(ex, "inputWikiText(y) at ../myadminall.app:276/5");
+      printTemplateCallException(ex, "inputWikiText(y) at ../myadminall.app:277/5");
     }
     if(RENDER_PHASE == phase)
     { 
@@ -462,7 +462,7 @@ public @SuppressWarnings("all") class page_admin_edit_Template extends TemplateS
     }
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall38", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"page_admin_editAdmin_Int_saveContent1" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("page_admin_editAdmin_Int_s_ad0String_Int_WikiText_Text_MyArticle_Int_Admin", getElementsContext(), new Object[]{new RefArg_page_admin_edit_Template2(page_admin_edit_Template.this), new RefArg_page_admin_edit_Template1(page_admin_edit_Template.this), new RefArg_page_admin_edit_Template0(page_admin_edit_Template.this), new RefArg_page_admin_edit_Template3(page_admin_edit_Template.this), count_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall72", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"page_admin_editAdmin_Int_saveContent1" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("page_admin_editAdmin_Int_s_ad0String_Int_WikiText_Text_MyArticle_Int_Admin", getElementsContext(), new Object[]{new RefArg_page_admin_edit_Template2(page_admin_edit_Template.this), new RefArg_page_admin_edit_Template1(page_admin_edit_Template.this), new RefArg_page_admin_edit_Template0(page_admin_edit_Template.this), new RefArg_page_admin_edit_Template3(page_admin_edit_Template.this), count_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 
@@ -491,7 +491,7 @@ public @SuppressWarnings("all") class page_admin_edit_Template extends TemplateS
     }
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall41", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"page_admin_editAdmin_Int_clearContent1" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("page_admin_editAdmin_Int_s_ad1String_Int_WikiText_Text_MyArticle_Int_Admin", getElementsContext(), new Object[]{new RefArg_page_admin_edit_Template2(page_admin_edit_Template.this), new RefArg_page_admin_edit_Template1(page_admin_edit_Template.this), new RefArg_page_admin_edit_Template0(page_admin_edit_Template.this), new RefArg_page_admin_edit_Template3(page_admin_edit_Template.this), count_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall75", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"page_admin_editAdmin_Int_clearContent1" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("page_admin_editAdmin_Int_s_ad1String_Int_WikiText_Text_MyArticle_Int_Admin", getElementsContext(), new Object[]{new RefArg_page_admin_edit_Template2(page_admin_edit_Template.this), new RefArg_page_admin_edit_Template1(page_admin_edit_Template.this), new RefArg_page_admin_edit_Template0(page_admin_edit_Template.this), new RefArg_page_admin_edit_Template3(page_admin_edit_Template.this), count_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 
@@ -510,13 +510,13 @@ public @SuppressWarnings("all") class page_admin_edit_Template extends TemplateS
       { 
         out.write(" enctype=\"multipart/form-data\"");
       }
-      out.write(sw2.toString());
+      out.write(sw4.toString());
       if(threadLocalPageCached.inSubmittedForm() && threadLocalPageCached.isValidationFormRerender())
       { 
         ThreadLocalOut.pop();
         if(threadLocalPageCached.submittedFormContent == null)
         { 
-          threadLocalPageCached.submittedFormContent = sw3.toString();
+          threadLocalPageCached.submittedFormContent = sw5.toString();
         }
         else
         { 

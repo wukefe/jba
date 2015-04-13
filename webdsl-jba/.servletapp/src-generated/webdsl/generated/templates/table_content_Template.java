@@ -41,12 +41,12 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
     { 
       if(i == 1)
       { 
-        java.util.ArrayList<webdsl.generated.domain.Admin> elems6 = new java.util.ArrayList<webdsl.generated.domain.Admin>();
+        java.util.ArrayList<webdsl.generated.domain.Admin> elems11 = new java.util.ArrayList<webdsl.generated.domain.Admin>();
         for(org.webdsl.WebDSLEntity ent : elems)
         { 
           if(ent.instanceOf("Admin"))
           { 
-            elems6.add((webdsl.generated.domain.Admin)ent);
+            elems11.add((webdsl.generated.domain.Admin)ent);
           }
         }
       }
@@ -155,11 +155,11 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
     PrintWriter out = ThreadLocalOut.peek();
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall9", "dslinit", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{}, "dslinit"), new Environment(env).putWithcall("elements#dslinit", new utils.TemplateCall("elementsempty", null, null, null)), "dslinit", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall37", "dslinit", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{}, "dslinit"), new Environment(env).putWithcall("elements#dslinit", new utils.TemplateCall("elementsempty", null, null, null)), "dslinit", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 
-      printTemplateCallException(ex, "dslinit() at ../myadminall.app:111/3");
+      printTemplateCallException(ex, "dslinit() at ../myadminall.app:112/3");
     }
     if(RENDER_PHASE == phase)
     { 
@@ -180,11 +180,11 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
     }
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall11", "page_left_barAdmin_Int", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{admin_, webdsl.generated.functions.findtotal_.findtotal_()}, "page_left_barAdmin_Int"), new Environment(env).putWithcall("elements#page_left_barAdmin_Int", new utils.TemplateCall("elementsempty", null, null, null)), "page_left_barAdmin_Int", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall39", "page_left_barAdmin_Int", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{admin_, webdsl.generated.functions.findtotal_.findtotal_()}, "page_left_barAdmin_Int"), new Environment(env).putWithcall("elements#page_left_barAdmin_Int", new utils.TemplateCall("elementsempty", null, null, null)), "page_left_barAdmin_Int", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 
-      printTemplateCallException(ex, "page_left_barAdmin_Int(admin, findtotal()) at ../myadminall.app:113/3");
+      printTemplateCallException(ex, "page_left_barAdmin_Int(admin, findtotal()) at ../myadminall.app:114/3");
     }
     if(RENDER_PHASE == phase)
     { 
@@ -562,11 +562,11 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
       }
       try
       { 
-        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall13", "outputInt", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{u_.getCount()}, "outputInt"), new Environment(env).putWithcall("elements#outputInt", new utils.TemplateCall("elementsempty", null, null, null)), "outputInt", TemplateCall.EmptyAttrs);
+        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall41", "outputInt", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{u_.getCount()}, "outputInt"), new Environment(env).putWithcall("elements#outputInt", new utils.TemplateCall("elementsempty", null, null, null)), "outputInt", TemplateCall.EmptyAttrs);
       }
       catch(RuntimeException ex)
       { 
-        printTemplateCallException(ex, "outputInt(u.count) at ../myadminall.app:130/8");
+        printTemplateCallException(ex, "outputInt(u.count) at ../myadminall.app:131/8");
       }
       if(RENDER_PHASE == phase)
       { 
@@ -590,11 +590,11 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
       }
       try
       { 
-        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall15", "outputString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{u_.getTitle()}, "outputString"), new Environment(env).putWithcall("elements#outputString", new utils.TemplateCall("elementsempty", null, null, null)), "outputString", TemplateCall.EmptyAttrs);
+        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall43", "outputString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{u_.getTitle()}, "outputString"), new Environment(env).putWithcall("elements#outputString", new utils.TemplateCall("elementsempty", null, null, null)), "outputString", TemplateCall.EmptyAttrs);
       }
       catch(RuntimeException ex)
       { 
-        printTemplateCallException(ex, "outputString(u.Title) at ../myadminall.app:131/8");
+        printTemplateCallException(ex, "outputString(u.Title) at ../myadminall.app:132/8");
       }
       if(RENDER_PHASE == phase)
       { 
@@ -618,11 +618,11 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
       }
       try
       { 
-        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall17", "outputString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{u_.getAuthor()}, "outputString"), new Environment(env).putWithcall("elements#outputString", new utils.TemplateCall("elementsempty", null, null, null)), "outputString", TemplateCall.EmptyAttrs);
+        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall45", "outputString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{u_.getAuthor()}, "outputString"), new Environment(env).putWithcall("elements#outputString", new utils.TemplateCall("elementsempty", null, null, null)), "outputString", TemplateCall.EmptyAttrs);
       }
       catch(RuntimeException ex)
       { 
-        printTemplateCallException(ex, "outputString(u.Author) at ../myadminall.app:132/8");
+        printTemplateCallException(ex, "outputString(u.Author) at ../myadminall.app:133/8");
       }
       if(RENDER_PHASE == phase)
       { 
@@ -646,11 +646,11 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
       }
       try
       { 
-        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall19", "outputDateTime", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{new RefArg_outputDateTime_1_table_contentpc0(u_)}, "outputDateTime"), new Environment(env).putWithcall("elements#outputDateTime", new utils.TemplateCall("elementsempty", null, null, null)), "outputDateTime", TemplateCall.EmptyAttrs);
+        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall47", "outputDateTime", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{new RefArg_outputDateTime_1_table_contentpc0(u_)}, "outputDateTime"), new Environment(env).putWithcall("elements#outputDateTime", new utils.TemplateCall("elementsempty", null, null, null)), "outputDateTime", TemplateCall.EmptyAttrs);
       }
       catch(RuntimeException ex)
       { 
-        printTemplateCallException(ex, "outputDateTime(u.created) at ../myadminall.app:133/8");
+        printTemplateCallException(ex, "outputDateTime(u.created) at ../myadminall.app:134/8");
       }
       if(RENDER_PHASE == phase)
       { 
@@ -674,11 +674,11 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
       }
       try
       { 
-        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall21", "outputDateTime", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{new RefArg_outputDateTime_1_table_contentpc1(u_)}, "outputDateTime"), new Environment(env).putWithcall("elements#outputDateTime", new utils.TemplateCall("elementsempty", null, null, null)), "outputDateTime", TemplateCall.EmptyAttrs);
+        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall49", "outputDateTime", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{new RefArg_outputDateTime_1_table_contentpc1(u_)}, "outputDateTime"), new Environment(env).putWithcall("elements#outputDateTime", new utils.TemplateCall("elementsempty", null, null, null)), "outputDateTime", TemplateCall.EmptyAttrs);
       }
       catch(RuntimeException ex)
       { 
-        printTemplateCallException(ex, "outputDateTime(u.modified) at ../myadminall.app:134/8");
+        printTemplateCallException(ex, "outputDateTime(u.modified) at ../myadminall.app:135/8");
       }
       if(RENDER_PHASE == phase)
       { 
@@ -705,21 +705,21 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
         org.webdsl.logging.Logger.error("Invalid nested <form> tag detected in DOM at URL: " + threadLocalPageCached.getRequest().getRequestURL() + "\n Enclosing form found in " + threadLocalPageCached.getEnclosingForm() + "\n Nested form found in " + getTemplateSignature());
       }
       threadLocalPageCached.enterForm(getTemplateSignature());
-      ident = (inForLoop ? forelementcounter : "") + ("form0" + getUniqueId());
+      ident = (inForLoop ? forelementcounter : "") + ("form1" + getUniqueId());
       threadLocalPageCached.setFormIdent(ident);
       if(threadLocalPageCached.getParammap().get(ident) != null)
       { 
         threadLocalPageCached.setInSubmittedForm(true);
       }
-      java.io.StringWriter sw1 = null;
-      java.io.StringWriter sw0 = null;
+      java.io.StringWriter sw3 = null;
+      java.io.StringWriter sw2 = null;
       if(RENDER_PHASE == phase)
       { 
         threadLocalPageCached.formRequiresMultipartEnc = false;
         if(threadLocalPageCached.inSubmittedForm() && threadLocalPageCached.isValidationFormRerender())
         { 
-          sw1 = new java.io.StringWriter();
-          out = new java.io.PrintWriter(sw1);
+          sw3 = new java.io.StringWriter();
+          out = new java.io.PrintWriter(sw3);
           ThreadLocalOut.push(out);
         }
         out.print("<form name=\"" + ident + "\" id=\"" + ident + "\" action=\"" + utils.HTMLFilter.filter(threadLocalPageCached.getPageUrlWithParams() + threadLocalPageCached.getExtraQueryAruments("?")) + "\" accept-charset=\"UTF-8\" method=\"POST\"");
@@ -735,8 +735,8 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
           AttributeCollectionLookup.getAttributeCollection("form", classattrs, styleattrs, ignore, out);
           utils.TemplateCall.printClassStyleAttributes(classattrs, styleattrs, out);
         }
-        sw0 = new java.io.StringWriter();
-        out = new java.io.PrintWriter(sw0);
+        sw2 = new java.io.StringWriter();
+        out = new java.io.PrintWriter(sw2);
         ThreadLocalOut.push(out);
         out.print(">");
         out.print("<input type=\"hidden\" name=\"" + ident + "\" value=\"1\" />");
@@ -744,7 +744,7 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
       }
       try
       { 
-        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall23", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"table_contentAdmin_Int_ia0_" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("table_contentAdmin_Int_s_ad0String_MyArticle_Int_Admin", getElementsContext(), new Object[]{u_, len_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
+        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall51", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"table_contentAdmin_Int_ia0_" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("table_contentAdmin_Int_s_ad0String_MyArticle_Int_Admin", getElementsContext(), new Object[]{u_, len_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
       }
       catch(RuntimeException ex)
       { 
@@ -752,7 +752,7 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
       }
       try
       { 
-        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall26", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"table_contentAdmin_Int_ia1_" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("table_contentAdmin_Int_s_ad1String_MyArticle_Int_Admin", getElementsContext(), new Object[]{u_, len_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
+        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall54", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"table_contentAdmin_Int_ia1_" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("table_contentAdmin_Int_s_ad1String_MyArticle_Int_Admin", getElementsContext(), new Object[]{u_, len_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
       }
       catch(RuntimeException ex)
       { 
@@ -760,7 +760,7 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
       }
       try
       { 
-        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall29", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"table_contentAdmin_Int_ia2_" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("table_contentAdmin_Int_s_ad2String_MyArticle_Int_Admin", getElementsContext(), new Object[]{u_, len_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
+        handleTemplateCall(phase, inForLoop, forelementcounter, "tcall57", "wrapsubmitString", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{"table_contentAdmin_Int_ia2_" + webdsl.generated.functions.getPage_.getPage_().getTemplateContext().getTemplateContextString()}, "wrapsubmitString"), new Environment(env).putWithcall("s", new utils.TemplateCall("table_contentAdmin_Int_s_ad2String_MyArticle_Int_Admin", getElementsContext(), new Object[]{u_, len_, admin_}, attrs)), "wrapsubmitString", TemplateCall.EmptyAttrs);
       }
       catch(RuntimeException ex)
       { 
@@ -775,13 +775,13 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
         { 
           out.write(" enctype=\"multipart/form-data\"");
         }
-        out.write(sw0.toString());
+        out.write(sw2.toString());
         if(threadLocalPageCached.inSubmittedForm() && threadLocalPageCached.isValidationFormRerender())
         { 
           ThreadLocalOut.pop();
           if(threadLocalPageCached.submittedFormContent == null)
           { 
-            threadLocalPageCached.submittedFormContent = sw1.toString();
+            threadLocalPageCached.submittedFormContent = sw3.toString();
           }
           else
           { 
@@ -867,11 +867,11 @@ public @SuppressWarnings("all") class table_content_Template extends TemplateSer
     }
     try
     { 
-      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall32", "outputInt", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{webdsl.generated.functions.findtotal_.findtotal_()}, "outputInt"), new Environment(env).putWithcall("elements#outputInt", new utils.TemplateCall("elementsempty", null, null, null)), "outputInt", TemplateCall.EmptyAttrs);
+      handleTemplateCall(phase, inForLoop, forelementcounter, "tcall60", "outputInt", env.addExtraLocalTemplateArgumentsToArguments(new Object[]{webdsl.generated.functions.findtotal_.findtotal_()}, "outputInt"), new Environment(env).putWithcall("elements#outputInt", new utils.TemplateCall("elementsempty", null, null, null)), "outputInt", TemplateCall.EmptyAttrs);
     }
     catch(RuntimeException ex)
     { 
-      printTemplateCallException(ex, "outputInt(findtotal()) at ../myadminall.app:146/56");
+      printTemplateCallException(ex, "outputInt(findtotal()) at ../myadminall.app:147/56");
     }
     if(RENDER_PHASE == phase)
     { 

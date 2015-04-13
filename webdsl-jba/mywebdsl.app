@@ -44,7 +44,7 @@ define dslblogpost(){
 			<li>"it is e"</li>
 			</ol>
 	</div>*/
-	for(u : MyArticle order by u.count asc){
+	for(u : MyArticle order by u.count desc){
 		<div class="blog-post">
 			//navigate(view_article(u))[class="blog-post-title"]{output(u.Title)}
 			//<h2 class="blog-post-title">output(u.Title)</h2>
