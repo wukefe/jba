@@ -13,16 +13,17 @@ The JBA stands for "A Jekyll like Blog Application" which is written by webDSL, 
 The final version for course project is updated. Please check out the following instructions to reproduce the JBA. 
 
 Instructions
-> Step 1: Install the WebDSL plugin on Eclipse with the following [instruction](http://webdsl.org/selectpage/Download/WebDSLplugin).
-> Step 2: Import the whole project into Eclipse environment directly.
-> Step 3: Press 'Ctrl+Alt+B' to compile and deploy the JBA
+> * Step 1: Install the WebDSL plugin on Eclipse with the following [instruction](http://webdsl.org/selectpage/Download/WebDSLplugin).
+> * Step 2: Import the whole project into Eclipse environment directly.
+> * Step 3: Press 'Ctrl+Alt+B' to compile and deploy the JBA
 
 Screenshots
-![homepage2](homepage2.PNG)
-![](article-save.PNG)
-![](article-summary.PNG)
-![](article-view2.png)
-![article1](article1.PNG)
+> ![homepage2](homepage2.PNG)
+> ![](article-save.PNG)
+> ![](article-summary.PNG)
+> ![](article-view2.png)
+
+--The end of screenshots. --
 
 ## Updated on March 13, 2015
 The website is built on WebDSL with Bootstrap. Thanks for the provider of the Bootstrap template.
